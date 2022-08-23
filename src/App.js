@@ -1,10 +1,30 @@
 import logo from './logo.svg';
 import './App.css';
+import NavBar from "./components/NavBar";
 
 function App() {
   return (
+  <div>  
+    <NavBar />
+
+
     <div className="App">
-      <header className="App-header">
+      <h1>Hola Mundo</h1>
+    </div>
+  
+  
+  <div className="App">footer</div>
+  
+  </div>
+  );
+}
+
+export default App;
+
+
+
+
+{/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -17,9 +37,4 @@ function App() {
         >
           Learn React
         </a>
-      </header>
-    </div>
-  );
-}
-
-export default App;
+      </header> */}
