@@ -1,20 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
 import NavBar from "./components/NavBar";
+import ItemListContainer from './components/ItemListContainer';
+
 
 function App() {
+  const saludo = "Hola Mundo"
   return (
+
   <div>  
+    
     <NavBar />
+  
+    <ItemListContainer saludo={saludo} greeting= "Hola Coder"/>
 
-
-    <div className="App">
-      <h1>Hola Mundo</h1>
-    </div>
-  
-  
-  <div className="App">footer</div>
-  
+  <div className="App" style={{marginTop:"100px"}}>Footer</div>
   </div>
   );
 }

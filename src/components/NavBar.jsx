@@ -7,10 +7,7 @@ import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Fade from '@mui/material/Fade';
-// import PopupState, { bindTrigger, bindMenu } from 'material-ui-popup-state';
-// import IconButton from '@mui/material/IconButton';
-// import MenuIcon from '@mui/icons-material/Menu';
-
+import CartWidget from "./CartWidget";
 
 
 export default function NavBar() {
@@ -26,20 +23,12 @@ return <div>
     <Box sx={{ flexGrow: 1 }}>
     <AppBar position="static">
         <Toolbar>
-        {/* <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            sx={{ mr: 2 }}
-        >
-            
-            <MenuIcon />
-        </IconButton> */}
+    
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             CandyShop
         </Typography>
         {/* <Button color="inherit">Menú</Button> */}
+    <CartWidget counter={7}/>
         <div>
     <Button 
         id="fade-button"
@@ -51,7 +40,8 @@ return <div>
     >
         Menú
     </Button>
-    <Menu
+    
+        <Menu
         id="fade-menu"
         MenuListProps={{
         'aria-labelledby': 'fade-button',
@@ -66,6 +56,7 @@ return <div>
         <MenuItem onClick={handleClose}>Chupetin</MenuItem>
         <MenuItem onClick={handleClose}>Alfajores</MenuItem>
     </Menu>
+    
     </div>
         </Toolbar>
     </AppBar>
