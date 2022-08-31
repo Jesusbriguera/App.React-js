@@ -1,11 +1,13 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import NavBar from "./components/NavBar";
 import ItemListContainer from './components/ItemListContainer';
+import ItemCount from './components/ItemCount';
 
 
 function App() {
   const saludo = "Hola Mundo"
+
   return (
 
   <div>  
@@ -13,9 +15,13 @@ function App() {
     <NavBar />
   
     <ItemListContainer saludo={saludo} greeting= "Hola Coder"/>
+  
+  <div className="App"><ItemCount/></div> 
 
   <div className="App" style={{marginTop:"100px"}}>Footer</div>
+  
   </div>
+  
   );
 }
 
