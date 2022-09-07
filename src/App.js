@@ -1,36 +1,29 @@
 // import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import ItemListContainer from "./components/ItemListContainer";
 import NavBar from "./components/NavBar";
-import ItemListContainer from './components/ItemListContainer';
-import ItemCount from './components/ItemCount';
-
 
 function App() {
-  const saludo = "Hola Mundo"
+  const saludo = "Hola Mundo";
 
   return (
+    <div>
+      <NavBar />
 
-  <div>  
-    
-    <NavBar />
-  
-    <ItemListContainer saludo={saludo} greeting= "Hola Coder"/>
-  
-  <div className="App"><ItemCount/></div> 
+      <ItemListContainer saludo={saludo} greeting="Hola Coder" />
 
-  <div className="App" style={{marginTop:"100px"}}>Footer</div>
-  
-  </div>
-  
+      {/* <ItemDetailContainer /> */}
+      {/* <div className="App"><ItemCount/></div>  */}
+
+      {/* <div className="App" style={{marginTop:"100px"}}>Footer</div> */}
+    </div>
   );
 }
 
 export default App;
 
-
-
-
-{/* <header className="App-header">
+{
+  /* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -43,4 +36,5 @@ export default App;
         >
           Learn React
         </a>
-      </header> */}
+      </header> */
+}

@@ -29,5 +29,17 @@ const productos = [
     img: producto4,
   },
 ];
+export default productos
 
-export default productos;
+
+export const data = new Promise((resolve, reject) => {
+  let condition = true
+  setTimeout(()=> {
+    if(condition){
+      resolve(productos)
+    }else{
+      reject('Error')
+    }
+
+  },3000)
+})
