@@ -43,3 +43,10 @@
   align-items: center;
   flex-wrap: wrap;
 }
+
+.navbar{
+  color: aliceblue;
+  margin-right: 50px;
+  font-size: 2rem;
+  text-decoration: none;
+}

@@ -5,28 +5,32 @@ import producto4 from "./img/producto4.png";
 
 const productos = [
   {
-    id: 1,
+    id: "1",
     nombre: "Chocopause x 45gr",
     precio: 200,
     img: producto1,
+    categoria:"chocolates" 
   },
   {
-    id: 2,
+    id: "2",
     nombre: "Oreo Bañadas x 119gr",
     precio: 600,
     img: producto2,
+    categoria:"alfajores"
   },
   {
-    id: 3,
+    id: "3",
     nombre: "Oblea Kit Kat Gold x 45gr",
     precio: 300,
     img: producto3,
+    categoria:"chocolates"
   },
   {
-    id: 4,
+    id: "4",
     nombre: "M&M Confite x 47.9G",
     precio: 250,
     img: producto4,
+    categoria:"bombones"
   },
 ];
 export default productos
