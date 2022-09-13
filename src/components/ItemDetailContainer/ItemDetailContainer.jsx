@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { data } from "../../mocks/mockData";
-import ItemDetail from "./ItemDetail";
+import { data } from "../mocks/mockData";
+import ItemDetail from "../ItemDetail/ItemDetail";
 import { useParams } from "react-router-dom";
 
 export default function ItemDetailContainer() {

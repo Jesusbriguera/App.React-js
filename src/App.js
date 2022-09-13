@@ -1,9 +1,11 @@
 // import logo from './logo.svg';
 import "./App.css";
+import 'bootstrap/dist/css/bootstrap.css'
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import NavBar from "./components/NavBar/NavBar";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import ItemDetailContainer from "./components/DetailContainer/Detail/ItemDetailContainer";
+import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
+import Cart from '../src/components/Cart/Cart';
 
 function App() {
   const saludo = "Hola Mundo";
@@ -18,6 +20,7 @@ function App() {
         />
         <Route path='/categoria/:categoriaId' element={ <ItemListContainer saludo={saludo} greeting='hello' />}/>
         <Route path="/detalle/:id" element={<ItemDetailContainer />} />
+        <Route path='/Cart' element={<Cart/>}/>
         <Route />
       </Routes>
       {/* <div className="App"><ItemCount/></div>  */}

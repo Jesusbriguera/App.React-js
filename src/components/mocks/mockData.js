@@ -9,28 +9,32 @@ const productos = [
     nombre: "Chocopause x 45gr",
     precio: 200,
     img: producto1,
-    categoria:"chocolates" 
+    categoria:"chocolates",
+    stock:10 
   },
   {
     id: "2",
     nombre: "Oreo Bañadas x 119gr",
     precio: 600,
     img: producto2,
-    categoria:"alfajores"
+    categoria:"alfajores",
+    stock:10
   },
   {
     id: "3",
     nombre: "Oblea Kit Kat Gold x 45gr",
     precio: 300,
     img: producto3,
-    categoria:"chocolates"
+    categoria:"chocolates",
+    stock:10
   },
   {
     id: "4",
     nombre: "M&M Confite x 47.9G",
     precio: 250,
     img: producto4,
-    categoria:"bombones"
+    categoria:"bombones",
+    stock:10
   },
 ];
 export default productos

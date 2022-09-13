@@ -46,7 +46,11 @@
 
 .navbar{
   color: aliceblue;
-  margin-right: 50px;
-  font-size: 2rem;
+  margin-right: 20px;
+  font-size: 1.5rem;
   text-decoration: none;
+}
+
+.container-fluid{
+  color: white  
 }

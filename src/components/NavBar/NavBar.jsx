@@ -45,13 +45,13 @@ export default function NavBar() {
                 onClick={handleClick}
                 color="inherit"
               ></Button>
-              <NavLink className="navbar" to="/categoria/chocolates">
+              <NavLink className="container-fluid" to="/categoria/chocolates">
                 Chocolates
               </NavLink>
-              <NavLink className="navbar" to="/categoria/alfajores">
+              <NavLink className="container-fluid" to="/categoria/alfajores">
                 Alfajores
               </NavLink>
-              <NavLink className="navbar" to="/categoria/bombones">
+              <NavLink className="container-fluid" to="/categoria/bombones">
                 Bombones
               </NavLink>
             </div>

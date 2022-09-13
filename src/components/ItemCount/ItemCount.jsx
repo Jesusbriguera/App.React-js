@@ -1,38 +1,34 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
-export default function ItemCount() {
-  const [contador, setContador] = useState(5);
-
-  const increase = () => {
-    setContador(contador >= 10 ? setContador : contador + 1); //  máximo de 10
+const ItemCount = ({ initial, stock, onAdd, count, setCount }) => {
+  const restar = () => {
+    if (count > initial) {
+      setCount(count - 1);
+    }
   };
 
-  const decrease = () => {
-    setContador(contador <= 1 ? setContador : contador - 1); //  mínimo de 1
-  };
-
-  const confirm = () => {
-    alert("Producto agregado al Carrito");
+  const sumar = () => {
+    if (count < stock) {
+      setCount(count + 1);
+    }
   };
 
   return (
-    <div>
-      <button
-        style={{ margin: "10px", fontSize: "30px", width: "30px" }}
-        onClick={decrease}
-      >
-        {" "}
-        -{" "}
+    <>
+      <div>
+        <button className="btn btn-success" onClick={sumar}>
+          +
+        </button>
+        <span className="btn btn-light">{count}</span>
+        <button className="btn btn-danger" onClick={restar}>
+          -
+        </button>
+      </div>
+      <button className="btn btn-primary m-3" onClick={onAdd}>
+        comprar
       </button>
-      <button style={{ margin: "10px", fontSize: "30px" }} onClick={increase}>
-        {" "}
-        +{" "}
-      </button>
-      <h1>{contador}</h1>
-      <button style={{ margin: "10px", fontSize: "20px" }} onClick={confirm}>
-        {" "}
-        Agregar al carrito{" "}
-      </button>
-    </div>
+    </>
   );
-}
+};
+
+export default ItemCount;
