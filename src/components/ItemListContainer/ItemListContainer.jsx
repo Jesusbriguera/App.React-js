@@ -33,7 +33,6 @@ export default function ItemListContainer({ saludo, greeting }) {
       <div className="cardContainer">
         <ItemList listaProductos={listaProductos} />
       </div>
-      {/*<ItemDetailContainer />*/}
     </div>
   );
 }

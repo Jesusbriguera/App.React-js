@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import ItemCount from "../ItemCount/ItemCount";
 import { useNavigate } from "react-router-dom";
+import { useCart } from "../../context/CartContext";
 
 export default function ItemDetail({ productDetail }) {
   const { id, nombre, precio, img, stock } = productDetail;
   const [count, setCount] = useState(1);
   const [compra, setCompra] = useState(false);
   const navegar = useNavigate();
+  const { addItem, addItem2 } = useCart();
 
   const onAdd = () => {
     let purchase = {
@@ -18,6 +20,7 @@ export default function ItemDetail({ productDetail }) {
       quantity: count,
     };
     setCompra(true);
+    addItem(purchase);
   };
 
   return (
@@ -55,7 +58,11 @@ export default function ItemDetail({ productDetail }) {
               alignItems: "center",
             }}
           >
-            <button className="btn btn-warning" style={{margin: "10px"}}onClick={() => navegar("/")}>
+            <button
+              className="btn btn-warning"
+              style={{ margin: "10px" }}
+              onClick={() => navegar("/")}
+            >
               Seguir Comprando
             </button>
             <button className="btn btn-info" onClick={() => navegar("/cart")}>
