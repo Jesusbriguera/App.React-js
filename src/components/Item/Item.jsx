@@ -9,8 +9,8 @@ export default function Item({ productos }, { Item }) {
     <div
       style={{
         border: "solid 5px",
-        width: "9rem",
-        height: "15rem",
+        width: "10rem",
+        height: "18rem",
         margin: "30px",
       }}
     >
@@ -18,6 +18,7 @@ export default function Item({ productos }, { Item }) {
       <div>${productos.precio}</div>
       <img src={productos.img} width="100" alt={productos.nombre} />
       <button
+        className="btn btn-primary"
         style={{ marginTop: "30px" }}
         onClick={() => navegar(`/detalle/${id}`)}
       >

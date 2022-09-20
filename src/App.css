@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  margin: 10px
 }
 
 .App-logo {
@@ -53,4 +54,16 @@
 
 .container-fluid{
   color: white  
+}
+
+
+/*clases del carrito*/
+.btn.btn-danger{
+  margin: 15px
+}
+.btn.btn-success{
+  margin: 20px
+}
+.btn.btn-light{
+  margin: 10px
 }

@@ -35,7 +35,9 @@ export default function NavBar() {
               CandyShop
             </NavLink>
             {/* <Button color="inherit">Menú</Button> */}
-            <CartWidget counter={7} />
+            <NavLink to="/cart">
+              <CartWidget/>
+            </NavLink>
             <div>
               <Button
                 id="fade-button"

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ItemList from "../ItemList/ItemList";
-import { data } from "../mocks/mockData";
+import { data } from "../../mocks/img/mockData";
 
 export default function ItemListContainer({ saludo, greeting }) {
   const [listaProductos, setlistaProductos] = useState([]);
@@ -24,7 +24,7 @@ export default function ItemListContainer({ saludo, greeting }) {
       .finally(() => setLoading(false));
   }, [categoriaId]);
 
-  console.log(listaProductos);
+  // console.log(listaProductos);
   return (
     <div className="App">
       <p>{saludo}</p>

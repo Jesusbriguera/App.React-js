@@ -6,7 +6,7 @@ import producto4 from "./img/producto4.png";
 const productos = [
   {
     id: "1",
-    nombre: "Chocopause x 45gr",
+    nombre: "Chocopause Milka x 45gr",
     precio: 200,
     img: producto1,
     categoria: "chocolates",
