@@ -1,5 +1,7 @@
+import { collection, doc, getDoc } from "firebase/firestore";
 import React, { useEffect, useState } from "react";
-import { data } from "../../mocks/img/mockData";
+import { db } from "../../firebase/firebase";
+// import { data } from "../../mocks/mockData";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import { useParams } from "react-router-dom";
 
@@ -8,18 +10,32 @@ export default function ItemDetailContainer() {
   const [loading, setLoading] = useState(true);
   const { id } = useParams();
 
-  console.log(productDetail);
   useEffect(() => {
-    data
-      .then((res) => setProductDetail(res.find((item) => item.id === id)))
+    const coleccionProductos = collection(db, "productos");
+    const referenciaDoc = doc(coleccionProductos, id);
+
+    getDoc(referenciaDoc)
+      .then((result) => {
+        setProductDetail({
+          id: result.id,
+          ...result.data(),
+        });
+      })
       .catch((error) => console.log(error))
       .finally(() => setLoading(false));
-  }, [id]);
+  }, []);
+
+  // useEffect(() => {
+  //   data
+  //     .then((res) => setProductDetail(res.find((item) => item.id === id)))
+  //     .catch((error) => console.log(error))
+  //     .finally(() => setLoading(false));
+  // }, [id]);
 
   return (
     <div>
       {loading ? (
-        <p>Cargando...</p>
+        <p style={{fontSize:"40px", marginLeft:"37%", marginTop:"15%"}}>Cargando...</p>
       ) : (
         <ItemDetail productDetail={productDetail} />
       )}
