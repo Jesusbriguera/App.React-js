@@ -44,5 +44,5 @@ export const data = new Promise((resolve, reject) => {
     } else {
       reject("Error");
     }
-  }, 3000);
+  }, 2000);
 });
