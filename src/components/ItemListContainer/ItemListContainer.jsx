@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ItemList from "../ItemList/ItemList";
-// import { data } from "../../mocks/mockData";
+
 import { collection, getDocs, query, where } from "firebase/firestore";
 import { db } from "../../firebase/firebase";
 
@@ -32,29 +32,11 @@ export default function ItemListContainer({ saludo, greeting }) {
       .finally(() => setLoading(false));
   }, [categoriaId]);
 
-  // useEffect(() => {
-  //   setLoading(true);
-  //   data
-  //     .then((res) => {
-  //       if (categoriaId) {
-  //         setlistaProductos(
-  //           res.filter((item) => item.categoria === categoriaId)
-  //         );
-  //       } else {
-  //         setlistaProductos(res);
-  //       }
-  //     })
-  //     .catch((error) => console.log(error))
-  //     .finally(() => setLoading(false));
-  // }, [categoriaId]);
-
-  // console.log(listaProductos);
-
   return (
     <div className="App">
-      <p>{saludo}</p>
+      <p style={{ margin: "30px", fontSize: "2rem" }}>{saludo}</p>
 
-      <p>{greeting}</p>
+      {/* <p>{greeting}</p> */}
       <div className="cardContainer">
         <ItemList listaProductos={listaProductos} />
       </div>

@@ -1,6 +1,27 @@
-# Getting Started with Create React App
+# CandyShop - React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# E-commerce Create by Briguera Jesús  
+## https://github.com/Jesusbriguera/App.React-js.git
+
+## Objetivo de la App
+
+CandyShop es un proyecto E-commerce realizado en React.js de venta de productos del rubro "Golosineria". Los productos y las órdenes de compras con los pedidos se almacenan en firebase.
+
+
+`Estas son las herramientas que utilice para realizar la App:`
+
+  - bootstrap: "5.2.2"
+  - firebase: "9.10.0"
+  - react: "18.2.0"
+  - react-bootstrap: "2.5.0"
+  - react-dom": "18.2.0"
+  - react-routerdom: "6.3.0"
+  - react-scripts: "5.0.1"
+  - react-toastify: "9.0.8"
+  - "fortawesome/react-fontawesome"
+
+# Vamos a ver la App: [ir a CandyShop](https://coder34720-candyshop-briguera.web.app/)
+
 
 ## Available Scripts
 

@@ -10,11 +10,10 @@ const CartItem = ({ compra }) => {
         justifyContent: "space-between",
         alignItems: "center",
         padding: "2rem",
-        width: "100%",
-        
+        width: "80%",
       }}
     >
-      <img src={compra.img} alt={compra.nombre} width="100"/>
+      <img src={compra.img} alt={compra.nombre} width="100" />
       <span>{compra.nombre}</span>
       <span>{compra.quantity}</span>
       <span>${compra.precio}</span>

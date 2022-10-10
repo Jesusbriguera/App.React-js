@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useCart } from "../../context/CartContext";
 
 export default function ItemDetail({ productDetail }) {
-  const { id, nombre, precio, img, stock } = productDetail;
+  const { id, nombre, precio, img, stock, descripcion } = productDetail;
   const [count, setCount] = useState(1);
   const [compra, setCompra] = useState(false);
   const navegar = useNavigate();
@@ -16,6 +16,7 @@ export default function ItemDetail({ productDetail }) {
       nombre,
       precio,
       stock,
+      descripcion,
       img,
       quantity: count,
     };
@@ -36,12 +37,9 @@ export default function ItemDetail({ productDetail }) {
       >
         <h2>Detalle de: {nombre}</h2>
         <img src={img} alt={nombre} style={{ width: "25rem" }} />
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam,
-          necessitatibus reiciendis rerum maiores molestias corporis accusamus
-          magnam quo ad libero dolorum sed cum dolores placeat voluptate et.
-          Mollitia, fugit quis.
-        </p>
+        <p style={{ fontSize: "1.5rem", margin: "20px" }}>{descripcion}</p>
+        <p style={{ fontSize: "2rem" }}>${precio}</p>
+
         {!compra ? (
           <ItemCount
             stock={stock}

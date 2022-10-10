@@ -1,65 +1,54 @@
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
-import Toolbar from "@mui/material/Toolbar";
 import React from "react";
-import { NavLink } from "react-router-dom";
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
 import CartWidget from "../CartWidget/CartWidget";
 
-export default function NavBar() {
-  const pages = [
-    { enlace: "/categoria/chocolates", nombre: "Chocolates" },
-    { enlace: "/categoria/alfajores", nombre: "Alfajores" },
-    { enlace: "/categoria/bombones", nombre: "Bombones" },
-  ];
-  const [anchorEl, setAnchorEl] = React.useState(null);
-  const open = Boolean(anchorEl);
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
+function BasicExample() {
   return (
-    <div>
-      <Box sx={{ flexGrow: 1 }}>
-        <AppBar position="static">
-          <Toolbar>
-            <NavLink
-              className="navbar"
-              variant="h6"
-              component="div"
-              to="/"
-              sx={{ flexGrow: 1 }}
+    <Navbar style={{ marginLeft: "20px" }} bg="dark" variant="dark" expand="lg">
+      <Container>
+        <Navbar.Brand href="/" style={{ fontSize: "30px" }}>
+          <i>CandyShop</i>
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav
+            className="me-auto"
+            style={{ marginLeft: "10%", marginTop: "3px" }}
+          >
+            <Nav.Link
+              href="/categoria/novedades"
+              style={{ marginLeft: "15px" }}
             >
-              CandyShop
-            </NavLink>
-            {/* <Button color="inherit">Menú</Button> */}
-            <NavLink to="/cart">
-              <CartWidget/>
-            </NavLink>
-            <div>
-              <Button
-                id="fade-button"
-                aria-controls={open ? "fade-menu" : undefined}
-                aria-haspopup="true"
-                aria-expanded={open ? "true" : undefined}
-                onClick={handleClick}
-                color="inherit"
-              ></Button>
-              <NavLink className="container-fluid" to="/categoria/chocolates">
-                Chocolates
-              </NavLink>
-              <NavLink className="container-fluid" to="/categoria/alfajores">
-                Alfajores
-              </NavLink>
-              <NavLink className="container-fluid" to="/categoria/bombones">
-                Bombones
-              </NavLink>
-            </div>
-          </Toolbar>
-        </AppBar>
-      </Box>
-    </div>
+              Novedades
+            </Nav.Link>
+            <Nav.Link href="/categoria/ofertas" style={{ marginLeft: "15px" }}>
+              Ofertas
+            </Nav.Link>
+            <Nav.Link
+              href="/categoria/mas vendidos"
+              style={{ whiteSpace: "nowrap", marginLeft: "15px" }}
+            >
+              Mas Vendidos
+            </Nav.Link>
+            <Nav.Link
+              href="/cart"
+              style={{
+                marginLeft: "20%",
+                marginTop: "-10px",
+                marginBottom: "-10px",
+                fontSize: "20px",
+                whiteSpace: "nowrap",
+              }}
+            >
+              <CartWidget />
+            </Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 }
+
+export default BasicExample;

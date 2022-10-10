@@ -56,14 +56,11 @@
   color: white  
 }
 
+.card:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
 
-/*clases del carrito*/
-.btn.btn-danger{
-  margin: 15px
+.carrito{
+margin-left: 70%;  
 }
-.btn.btn-success{
-  margin: 20px
-}
-.btn.btn-light{
-  margin: 10px
-}
+

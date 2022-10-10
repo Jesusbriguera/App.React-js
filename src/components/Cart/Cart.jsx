@@ -6,12 +6,18 @@ import CartItem from "./CartItem";
 const Cart = () => {
   const { cart, cartTotal, clear } = useCart();
   const navegar = useNavigate();
-  console.log("carrito", cart);
+
   return (
     <div>
       {!cart.length ? (
-        <div style={{textAlign:"center", margin:"20px"}} >
-          <h2>Tu carrito esta vacio!</h2>
+        <div style={{ textAlign: "center", margin: "20px" }}>
+          <img
+            src="https://i.postimg.cc/rsYTGFfy/carrito-Vacio.png"
+            alt="carrito vacio"
+            srcset=""
+            width={350}
+          ></img>
+          <h2 style={{ marginTop: "50px" }}>Tu carrito está vacío!</h2>
           <h4>Te invitamos a ver nuestros productos</h4>
           <button className="btn btn-success" onClick={() => navegar("/")}>
             Ir a comprar
@@ -25,7 +31,7 @@ const Cart = () => {
             alignItems: "center",
           }}
         >
-          <h2 style={{margin:"30px"}}>Tu Carrito</h2>
+          <h2 style={{ margin: "30px" }}>Tu Carrito</h2>
           {cart.map((compra) => (
             <CartItem key={compra.id} compra={compra} />
           ))}
@@ -41,7 +47,12 @@ const Cart = () => {
             <button className="btn btn-danger" onClick={clear}>
               Vaciar Carrito
             </button>
-            <button className="btn btn-success" onClick={()=>navegar('/checkout')}>Terminar compra</button>
+            <button
+              className="btn btn-success"
+              onClick={() => navegar("/checkout")}
+            >
+              Terminar compra
+            </button>
           </div>
         </div>
       )}

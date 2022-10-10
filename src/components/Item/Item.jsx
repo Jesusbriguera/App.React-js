@@ -2,27 +2,44 @@ import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 export default function Item({ productos }, { Item }) {
-  const { id, img, nombre, precio } = productos;
+  const { id, img, nombre, precio, stock, descripcion } = productos;
   const navegar = useNavigate();
 
   return (
     <div
+      className="card"
       style={{
-        border: "solid 5px",
-        width: "10rem",
-        height: "18rem",
-        margin: "30px",
+        width: "15rem",
+        height: "25rem",
+        margin: ".2rem",
+        marginTop: "30px",
       }}
     >
-      <div style={{ margin: "5px" }}>{productos.nombre}</div>
-      <div>${productos.precio}</div>
-      <img src={productos.img} width="100" alt={productos.nombre} />
+      <div
+        style={{
+          backgroundImage: `url('${img}')`,
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+          backgroundSize: "contain",
+          width: "100&",
+          height: "20rem",
+        }}
+      />
+
+      <div className="card-body">
+        <p className="card-text fw-bold" style={{ fontSize: "1.2rem" }}>
+          {nombre}
+        </p>
+
+        <p className="card-text" style={{ fontSize: "1.5rem" }}>
+          ${precio}
+        </p>
+      </div>
       <button
         className="btn btn-primary"
-        style={{ marginTop: "30px" }}
         onClick={() => navegar(`/detalle/${id}`)}
       >
-        Ver mas
+        Ver más
       </button>
     </div>
   );

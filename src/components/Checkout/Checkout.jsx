@@ -4,6 +4,7 @@ import { useState } from "react";
 import { db } from "../../firebase/firebase";
 import { useCart } from "../../context/CartContext";
 import { useNavigate } from "react-router-dom";
+import "react-toastify/dist/ReactToastify.css";
 
 const Checkout = () => {
   const [comprador, setComprador] = useState({});
@@ -43,7 +44,7 @@ const Checkout = () => {
   };
   if (loader) {
     return (
-      <p style={{ fontSize: "40px", marginLeft: "37%", marginTop: "15%" }}>
+      <p style={{ fontSize: "40px", marginLeft: "40%", marginTop: "15%" }}>
         Cargando...
       </p>
     );
@@ -52,11 +53,6 @@ const Checkout = () => {
     <div>
       {!orderId ? (
         <div>
-          <h2
-            style={{ fontSize: "20px", textAlign: "center", marginTop: "20px" }}
-          >
-            Checkout
-          </h2>
           <h4 style={{ fontSize: "40px", textAlign: "center", margin: "20px" }}>
             Por favor complete todos los campos
           </h4>
@@ -105,7 +101,8 @@ const Checkout = () => {
             {mensaje && (
               <p style={{ color: "red", margin: "20px", fontSize: "20px" }}>
                 {" "}
-                Por favor complete todos los campos
+                Por favor complete todos los campos para poder finalizar la
+                compra
               </p>
             )}
           </form>
@@ -122,7 +119,14 @@ const Checkout = () => {
           >
             Muchas gracias por su compra!
           </h2>
-          <h4 style={{ fontSize: "40px", textAlign: "center", margin: "20px" }}>
+          <h4
+            style={{
+              fontSize: "40px",
+              textAlign: "center",
+              margin: "20px",
+              color: "red",
+            }}
+          >
             Su orden es: {orderId}
           </h4>
           <button
