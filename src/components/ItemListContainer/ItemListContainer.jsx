@@ -34,7 +34,7 @@ export default function ItemListContainer({ saludo, greeting }) {
 
   return (
     <div className="App">
-      <p style={{ margin: "30px", fontSize: "2rem" }}>{saludo}</p>
+      <p className="display-3" style={{ marginTop: "30px"}}>{saludo}</p>
 
       {/* <p>{greeting}</p> */}
       <div className="cardContainer">

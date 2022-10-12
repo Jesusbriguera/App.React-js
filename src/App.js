@@ -8,9 +8,11 @@ import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailCont
 import Cart from "../src/components/Cart/Cart";
 import { CartProvider } from "./context/CartContext";
 import Checkout from "./components/Checkout/Checkout";
+import Footer from "./components/Footer/Footer";
+
 
 function App() {
-  // const saludo = "Hola Mundo";
+  const saludo = "Bienvenido/a a nuestra Tienda!";
 
   return (
     <CartProvider>
@@ -19,7 +21,7 @@ function App() {
         <Routes>
           <Route
             path="/"
-            element={<ItemListContainer greeting="PRODUCTOS" />}
+            element={<ItemListContainer saludo={saludo} greeting="PRODUCTOS" />}
           />
           <Route
             path="/categoria/:categoriaId"
@@ -30,9 +32,7 @@ function App() {
           <Route />
           <Route path="/Checkout" element={<Checkout />} />
         </Routes>
-        <div className="App" style={{ marginTop: "100px" }}>
-          {/* Footer */}
-        </div>
+        <Footer/>
       </BrowserRouter>
     </CartProvider>
   );

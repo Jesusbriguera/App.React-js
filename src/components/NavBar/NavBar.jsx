@@ -3,11 +3,15 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import CartWidget from "../CartWidget/CartWidget";
+import {FaCandyCane} from 'react-icons/fa'
 
 function BasicExample() {
   return (
     <Navbar style={{ marginLeft: "20px" }} bg="dark" variant="dark" expand="lg">
       <Container>
+        <Navbar.Brand href="/" >
+          <i><FaCandyCane style={{fontSize:"40px"}}/></i>
+        </Navbar.Brand>
         <Navbar.Brand href="/" style={{ fontSize: "30px" }}>
           <i>CandyShop</i>
         </Navbar.Brand>

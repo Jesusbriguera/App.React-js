@@ -18,6 +18,7 @@ CandyShop es un proyecto E-commerce realizado en React.js de venta de productos 
   - react-routerdom: "6.3.0"
   - react-scripts: "5.0.1"
   - react-toastify: "9.0.8"
+  - react-icons: "4.4.0"
   - "fortawesome/react-fontawesome"
 
 # Vamos a ver la App: [ir a CandyShop](https://coder34720-candyshop-briguera.web.app/)

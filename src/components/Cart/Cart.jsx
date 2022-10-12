@@ -35,7 +35,7 @@ const Cart = () => {
           {cart.map((compra) => (
             <CartItem key={compra.id} compra={compra} />
           ))}
-          <span>Total a pagar : ${cartTotal()}</span>
+          <span style={{fontSize:"40px"}}>Total a pagar : ${cartTotal()}</span>
           <div
             style={{
               display: "flex",

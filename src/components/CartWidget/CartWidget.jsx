@@ -8,7 +8,6 @@ export default function CartWidget({ counter }) {
   return (
     <div style={{ fontSize: "2em", marginRight: "30px", color: "white" }}>
       <FontAwesomeIcon icon={faCartShopping} />
-
       <span style={{ margin: "12px" }}>{cartQuantity() || ""}</span>
     </div>
   );
